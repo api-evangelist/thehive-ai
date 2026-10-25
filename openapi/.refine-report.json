@@ -1,0 +1,28 @@
+{
+  "provider": "thehive-ai",
+  "sources": [
+    "thehive-ai-tasks-api-openapi.yml"
+  ],
+  "outputs": [
+    "thehive-ai-task-api-openapi.yml"
+  ],
+  "archived": [
+    "deleted 1 superseded output(s) from the previous generation"
+  ],
+  "errors": [],
+  "warnings": [
+    "thehive-ai-tasks-api-openapi.yml: previously refined output kept for 4 operation(s) no archived document covers (e.g. /v1/task get, /v1/task/async post, /v1/task/callback post); its other 0 operation(s) came from the archive and were dropped from it. The archive is incomplete for this provider \u2014 re-harvest to restore _original/ as the full source of truth."
+  ],
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "thehive-ai-tasks-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "thehive-ai-tasks-api-openapi.yml: tagged paths GET /v1/task -> Task",
+    "thehive-ai-tasks-api-openapi.yml: tagged paths POST /v1/task/async -> Task",
+    "thehive-ai-tasks-api-openapi.yml: tagged paths POST /v1/task/callback -> Task",
+    "thehive-ai-tasks-api-openapi.yml: tagged paths POST /v2/task/sync -> Task",
+    "thehive-ai-tasks-api-openapi.yml: declared missing tag: Task",
+    "superseded outputs removed: thehive-ai-tasks-api-openapi.yml",
+    "apis.yml register: written (+1 apis, 1 total)"
+  ],
+  "skipped": []
+}

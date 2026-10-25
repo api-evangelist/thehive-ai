@@ -1,0 +1,18 @@
+generated: '2026-10-25'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.thehive.ai/reference/authentication.md
+sources:
+- https://docs.thehive.ai/reference/authentication.md
+- https://docs.thehive.ai/docs/getting-started.md
+- https://docs.thehive.ai/docs/automl-overview.md
+- https://docs.thehive.ai/docs/moderation-dashboard-quickstart-tutorial.md
+description: Hive V2 API uses a simple API key passed in the HTTP header.
+schemes:
+- type: apiKey
+  name: API Key
+  evidence: 'To authenticate requests, include your API key in the HTTP header:'
+  location: header
+  header: authorization
+note: No OAuth2, HTTP basic, bearer, JWT, HMAC, mTLS, or other authentication methods are documented.
+docs: https://docs.thehive.ai/reference/authentication.md

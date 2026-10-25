@@ -1,0 +1,16 @@
+generated: '2026-10-25'
+source: https://thehive.ai/privacy
+method: probed
+signals:
+  data_residency:
+    - source: https://thehive.ai/privacy
+      http_status: 200
+      fetched: true
+      quote: "The Services are operated from the United States. Information may be processed and stored in the United States or other countries."
+      note: Indicates data may be stored outside EU, specifying US residency.
+  age_assurance:
+    - source: https://thehive.ai/privacy
+      http_status: 200
+      fetched: true
+      quote: "The Services are not intended for use by children under the age of 13."
+      note: States minimum age for users.

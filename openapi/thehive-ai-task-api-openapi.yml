@@ -1,0 +1,643 @@
+openapi: 3.2.0
+info:
+  title: tasks Task API
+  version: '1.0'
+servers:
+- url: https://api.thehive.ai/api/
+security:
+- sec0: []
+tags:
+- name: Task
+paths:
+  /v1/task:
+    get:
+      summary: Get Task Summary
+      description: ''
+      operationId: get-task-summary
+      parameters:
+      - name: task_id
+        in: query
+        description: Unique ID of the task.
+        required: true
+        schema:
+          type: string
+          default: dd52c0d0-9ec7-11ea-98a3-4b92424b8366"
+      - name: frame_offset
+        in: query
+        description: Only applicable for long video/audio projects. By default we return frames starting from the first (0) frame up to frame_limit.
+        schema:
+          type: integer
+          format: int32
+      - name: frame_limit
+        in: query
+        description: Only applicable for long video/audio projects. Specifies the maximum number of frames to return. By default, we only return results for 1000 frames from the video starting at frame_offset.
+        schema:
+          type: integer
+          format: int32
+          default: 1000
+      responses:
+        '200':
+          description: '200'
+          content:
+            application/json:
+              examples:
+                OK:
+                  value: "{\n  \"project_id\": 18416,\n  \"task_id\": \"dd52c0d0-9ec7-11ea-98a3-4b92424b8366\",\n  \"progress\": \"completed\",\n  \"state\": \"finished\",\n  \"created_on\": \"2020-05-28T00:21:21.543Z\",\n  \"completed_on\": \"2020-05-28T00:21:22.329Z\",\n  \"upload_history_id\": \"6c5be30b-24ca-463e-809a-9fd061b7bae7\",\n  \"image_url\": null,\n  \"original_filename\": null,\n  \"file_id\": null,\n  \"label_data\": null,\n  \"status\": [\n    {\n      \"status\": {\n        \"code\": \"0\",\n        \"message\": \"SUCCESS\"\n      },\n      \"response\": {\n        \"input\": {\n          \"hash\": \"a71690e72e5cabafc73dc2717818fc6d\",\n          \"inference_client_version\": \"4.0.8\",\n          \"model\": \"textmod_svs_2langs_release_test2\",\n          \"model_type\": \"TEXT_CLASSIFICATION\",\n          \"model_version\": 1,\n          \"text\": \"rich test data 3\",\n          \"id\": \"2846b170-a079-11ea-b023-6bfe10549ae0\",\n          \"created_on\": \"2020-05-28T00:21:21.543Z\",\n          \"user_id\": 6994,\n          \"project_id\": 18416,\n          \"charge\": \"0.00100\",\n          \"media\": {\n            \"mimetype\": null\n          },\n          \"config_version\": 1,\n          \"config_tag\": \"default\"\n        },\n        \"output\": [\n          {\n            \"time\": 1.98,\n            \"classes\": [\n              {\n                \"class\": \"suggestive\",\n                \"score\": 0.0010710965501463823\n              },\n              {\n                \"class\": \"sexual\",\n                \"score\": 0.0027024835147116755\n              },\n              {\n                \"class\": \"no_sexual\",\n                \"score\": 0.9962264199351419\n              },\n              {\n                \"class\": \"self_harm\",\n                \"score\": 0.0002235677990901144\n              },\n              {\n                \"class\": \"violence\",\n                \"score\": 0.0007041907670250179\n              },\n              {\n                \"class\": \"no_violence\",\n                \"score\": 0.999072241433885\n              },\n              {\n                \"class\": \"yes_spam\",\n                \"score\": 0.000881996410983426\n              },\n              {\n                \"class\": \"no_spam\",\n                \"score\": 0.9991180035890167\n              }\n            ],\n            \"start_char_index\": 0,\n            \"end_char_index\": 16\n          }\n        ]\n      }\n    }\n  ],\n  \"status_to_edit\": null,\n  \"task_units\": 1,\n  \"base_customer_charge\": 0.001,\n  \"total_customer_charge\": 0.001,\n  \"focus\": null,\n  \"metadata\":\"my metadata string\"\n}"
+              schema:
+                type: object
+                properties:
+                  project_id:
+                    type: integer
+                    example: 18416
+                    default: 0
+                  task_id:
+                    type: string
+                    example: dd52c0d0-9ec7-11ea-98a3-4b92424b8366
+                  progress:
+                    type: string
+                    example: completed
+                  state:
+                    type: string
+                    example: finished
+                  created_on:
+                    type: string
+                    example: '2020-05-28T00:21:21.543Z'
+                  completed_on:
+                    type: string
+                    example: '2020-05-28T00:21:22.329Z'
+                  upload_history_id:
+                    type: string
+                    example: 6c5be30b-24ca-463e-809a-9fd061b7bae7
+                  image_url: {}
+                  original_filename: {}
+                  file_id: {}
+                  label_data: {}
+                  status:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        status:
+                          type: object
+                          properties:
+                            code:
+                              type: string
+                              example: '0'
+                            message:
+                              type: string
+                              example: SUCCESS
+                        response:
+                          type: object
+                          properties:
+                            input:
+                              type: object
+                              properties:
+                                hash:
+                                  type: string
+                                  example: a71690e72e5cabafc73dc2717818fc6d
+                                inference_client_version:
+                                  type: string
+                                  example: 4.0.8
+                                model:
+                                  type: string
+                                  example: textmod_svs_2langs_release_test2
+                                model_type:
+                                  type: string
+                                  example: TEXT_CLASSIFICATION
+                                model_version:
+                                  type: integer
+                                  example: 1
+                                  default: 0
+                                text:
+                                  type: string
+                                  example: rich test data 3
+                                id:
+                                  type: string
+                                  example: 2846b170-a079-11ea-b023-6bfe10549ae0
+                                created_on:
+                                  type: string
+                                  example: '2020-05-28T00:21:21.543Z'
+                                user_id:
+                                  type: integer
+                                  example: 6994
+                                  default: 0
+                                project_id:
+                                  type: integer
+                                  example: 18416
+                                  default: 0
+                                charge:
+                                  type: string
+                                  example: '0.00100'
+                                media:
+                                  type: object
+                                  properties:
+                                    mimetype: {}
+                                config_version:
+                                  type: integer
+                                  example: 1
+                                  default: 0
+                                config_tag:
+                                  type: string
+                                  example: default
+                            output:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  time:
+                                    type: number
+                                    example: 1.98
+                                    default: 0
+                                  classes:
+                                    type: array
+                                    items:
+                                      type: object
+                                      properties:
+                                        class:
+                                          type: string
+                                          example: suggestive
+                                        score:
+                                          type: number
+                                          example: 0.0010710965501463823
+                                          default: 0
+                                  start_char_index:
+                                    type: integer
+                                    example: 0
+                                    default: 0
+                                  end_char_index:
+                                    type: integer
+                                    example: 16
+                                    default: 0
+                  status_to_edit: {}
+                  task_units:
+                    type: integer
+                    example: 1
+                    default: 0
+                  base_customer_charge:
+                    type: number
+                    example: 0.001
+                    default: 0
+                  total_customer_charge:
+                    type: number
+                    example: 0.001
+                    default: 0
+                  focus: {}
+                  metadata:
+                    type: string
+                    example: my metadata string
+        '400':
+          description: '400'
+          content:
+            application/json:
+              examples:
+                Bad Request:
+                  value: '{
+
+                    "return_code":400,
+
+                    "message":"Invalid Auth Method. ''Token'' authentication required."
+
+                    }'
+              schema:
+                type: object
+                properties:
+                  return_code:
+                    type: integer
+                    example: 400
+                    default: 0
+                  message:
+                    type: string
+                    example: Invalid Auth Method. 'Token' authentication required.
+      deprecated: false
+      x-readme:
+        code-samples:
+        - language: curl
+          code: "curl --request GET \\\n  --url 'https://api.thehive.ai/api/v1/task?task_id=dd52c0d0-9ec7-11ea-98a3-4b92424b8366&frame_limit=2000&frame_offset=1000' \\\n  --header 'accept: application/json' \\\n  --header 'authorization: token <API_KEY>'"
+        - language: javascript
+          code: "var request = require(\"request\");\n\nvar options = {\n  method: 'GET',\n  url: 'https://api.thehive.ai/api/v1/task',\n  qs: {\n    task_id: 'dd52c0d0-9ec7-11ea-98a3-4b92424b8366',\n    frame_limit: '2000',\n    frame_offset: '1000'\n  },\n  headers: {\n    accept: 'application/json',\n    authorization: 'token <API_KEY>'\n  }\n};\n\nrequest(options, function (error, response, body) {\n  if (error) throw new Error(error);\n\n  console.log(body);\n});\n"
+          name: Node
+        samples-languages:
+        - curl
+        - javascript
+      tags:
+      - Task
+  /v1/task/async:
+    post:
+      summary: Submit a Task Asynchronously
+      description: ''
+      operationId: submit-a-task-asynchronously-backup
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              required:
+              - callback_url
+              properties:
+                media:
+                  type: string
+                  description: Use this key to send a binary file through a post request.
+                  format: binary
+                url:
+                  type: string
+                  description: Use this key to send your file using a publicly accessible url to a hosted media file.
+                  default: https://thehive.ai/images/e7a7d72.jpg
+                text_data:
+                  type: string
+                  description: Use text_data to submit raw text for text moderation projects.
+                  default: this is my text content for moderation
+                callback_url:
+                  type: string
+                  description: Callback URL where Hive will post the response to.
+                  default: https://webhook.site/#!/a79037b9-10df-495e-bf15-940025fa9101
+                metadata:
+                  type: string
+                  description: User specified metadata the will be included in the callback response.
+                  default: my metadata
+      responses:
+        '200':
+          description: '200'
+          content:
+            application/json:
+              examples:
+                Task Received:
+                  value: "{\n  \"id\":\"dd52c0d0-9ec7-11ea-98a3-4b92424b8366\",\n  \"message\":\"We received your task.\",\n  \"project_id\":14621,\n  \"user_id\":5822,\n  \"task_id\":\"dd52c0d0-9ec7-11ea-98a3-4b92424b8366\",\n  \"upload_history_id\":\"c5763977-8044-4aaa-a087-57d0c8146a03\",\n  \"image_url\":\"https://thehive.ai/images/e7a7d72.jpg\",\n  \"callback_url\":\"https://webhook.site/#!/a79037b9-10df-495e-bf15-940025fa9101\",\n  \"queue_priority\":3,\n  \"task_priority\":3\n}"
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    example: dd52c0d0-9ec7-11ea-98a3-4b92424b8366
+                  message:
+                    type: string
+                    example: We received your task.
+                  project_id:
+                    type: integer
+                    example: 14621
+                    default: 0
+                  user_id:
+                    type: integer
+                    example: 5822
+                    default: 0
+                  task_id:
+                    type: string
+                    example: dd52c0d0-9ec7-11ea-98a3-4b92424b8366
+                  upload_history_id:
+                    type: string
+                    example: c5763977-8044-4aaa-a087-57d0c8146a03
+                  image_url:
+                    type: string
+                    example: https://thehive.ai/images/e7a7d72.jpg
+                  callback_url:
+                    type: string
+                    example: https://webhook.site/#!/a79037b9-10df-495e-bf15-940025fa9101
+                  queue_priority:
+                    type: integer
+                    example: 3
+                    default: 0
+                  task_priority:
+                    type: integer
+                    example: 3
+                    default: 0
+        '400':
+          description: '400'
+          content:
+            application/json:
+              examples:
+                Bad Request:
+                  value: '{
+
+                    "return_code":400,
+
+                    "message":"Invalid Auth Method. ''Token'' authentication required."
+
+                    }'
+              schema:
+                type: object
+                properties:
+                  return_code:
+                    type: integer
+                    example: 400
+                    default: 0
+                  message:
+                    type: string
+                    example: Invalid Auth Method. 'Token' authentication required.
+      deprecated: false
+      x-readme:
+        code-samples:
+        - language: curl
+          code: "curl --request POST \\\n  --url https://api.thehive.ai/api/v1/task/async \\\n  --header 'accept: application/json' \\\n  --header 'authorization: token <API_KEY>' \\\n  --form 'url=http://hive-public.s3.amazonaws.com/demo_request/gun1.jpg' \\\n  --form 'callback_url=https://webhook.site/#!/3f2cca3e-d386-44d8-9548-63275021a443'"
+        - language: javascript
+          code: "var request = require(\"request\");\n\nvar options = {\n  method: 'POST',\n  url: 'https://api.thehive.ai/api/v1/task/async',\n  headers: {\n    accept: 'application/json',\n    authorization: 'token <API_KEY>'\n  },\n  form: {url:\"http://hive-public.s3.amazonaws.com/demo_request/gun1.jpg\",\n        callback_url:\"https://webhook.site/#!/3f2cca3e-d386-44d8-9548-63275021a443\"}\n};  \n\nrequest(options, function (error, response, body) {\n  if (error) throw new Error(error);\n\n  console.log(body);\n});\n\n"
+          name: Node
+        - language: python
+          code: 'import requests
+
+            url = ''https://api.thehive.ai/api/v1/task/async''
+
+            headers = {"authorization": "token <API_KEY>", "accept": "application/json"}
+
+            data = {''url'': ''http://hive-public.s3.amazonaws.com/demo_request/gun1.jpg'', ''callback_url'': ''https://webhook.site/#!/3f2cca3e-d386-44d8-9548-63275021a443''}
+
+            response = session.post("https://api.thehive.ai/api/v1/task/async", headers = headers, data = data)'
+          name: Python
+        samples-languages:
+        - curl
+        - javascript
+        - python
+      tags:
+      - Task
+  /v1/task/callback:
+    post:
+      summary: Trigger a Callback for a Completed Task
+      description: ''
+      operationId: trigger-a-callback-for-a-completed-task
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              required:
+              - task_id
+              properties:
+                task_id:
+                  type: string
+                  description: Use this key to send a binary file through a post request.
+                url_override:
+                  type: string
+                  description: Callback URL where Hive will post the response to. If specified, this will override the callback_url that was submitted with the initial request for the task.
+                metadata_override:
+                  type: string
+                  description: Metadata to be posted with the response. If specified, this will override the callback metadata that was submitted with the initial request for the task.
+                  default: my metadata
+      responses:
+        '200':
+          description: '200'
+          content:
+            application/json:
+              examples:
+                Resending callback:
+                  value: "{\n  \"return_code\":200,\n  \"message\": \"Resending callback!\"\n}"
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Resending callback!
+        '400':
+          description: '400'
+          content:
+            application/json:
+              examples:
+                Bad Request:
+                  value: '{
+
+                    "return_code":400,
+
+                    "message":"Invalid Auth Method. ''Token'' authentication required."
+
+                    }'
+              schema:
+                type: object
+                properties:
+                  return_code:
+                    type: integer
+                    example: 400
+                    default: 0
+                  message:
+                    type: string
+                    example: Invalid Auth Method. 'Token' authentication required.
+      deprecated: false
+      x-readme:
+        code-samples:
+        - language: curl
+          code: "curl --request POST \\\n  --url https://api.thehive.ai/api/v1/task/callback \\\n  --header 'accept:  application/json' \\\n  --header 'authorization: token <API_KEY>' \\\n  --form 'task_id=dd52c0d0-9ec7-11ea-98a3-4b92424b8366'"
+        - language: javascript
+          code: "var request = require(\"request\");\n\nvar options = {\n  method: 'POST',\n  url: 'https://api.thehive.ai/api/v1/task/callback',\n  headers: {\n    accept: 'application/json',\n    authorization: 'token <API_KEY>'\n  },\n  form: {task_id:\"dd52c0d0-9ec7-11ea-98a3-4b92424b8366\"}\n};\n\nrequest(options, function (error, response, body) {\n  if (error) throw new Error(error);\n\n  console.log(body);\n});\n"
+          name: Node
+        samples-languages:
+        - curl
+        - javascript
+      tags:
+      - Task
+  /v2/task/sync:
+    post:
+      summary: Submit a Task Synchronously
+      description: ''
+      operationId: submit-a-task-synchronously-backup
+      parameters:
+      - name: Authentication
+        in: header
+        description: auth token
+        schema:
+          type: string
+          default: Token <token>
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                media:
+                  type: string
+                  description: Use this key to send a binary file through a post request.
+                  format: binary
+                url:
+                  type: string
+                  description: Use this key to send your file using a publicly accessible url to a hosted media file.
+                  default: https://thehive.ai/images/e7a7d72.jpg
+                text_data:
+                  type: string
+                  description: Use text_data to submit raw text for text moderation projects.
+                  default: this is my text content for moderation
+      responses:
+        '200':
+          description: '200'
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{\n  \"id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n  \"code\": 200,\n  \"project_id\": 12345,\n  \"user_id\": 1234,\n  \"created_on\": \"2020-05-25T19:55:02.312Z\",\n  \"status\": {\n    \"status\": {\n      \"code\": 0,\n      \"message\": \"SUCCESS\"\n    },\n    \"response\": {\n    \"input\": {\n      \"id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n      \"charge\": 0,\n\t    \"model\": \"string\",\n      \"model_version\": 0,\n      \"model_type\": \"string\",\n      \"created_on\": \"string\",\n      \"media\": {\n        \"type\": \"string\",\n        \"mimetype\": \"string\",\n        \"duration\": 0,\n        \"width\": 0,\n        \"height\": 0\n      },\n      \"user_id\": 0,\n      \"project_id\": 0\n    },\n    \"output\": [\n      {\n        \"time\": 0,\n        \"classes\": [\n          {\n            \"class\": \"general_nsfw\",\n            \"score\": 0.9\n          },\n          {\n            \"class\": \"general_suggestive\",\n            \"score\": 0.05\n          },\n          {\n            \"class\": \"general_not_nsfw_not_suggestive\",\n            \"score\": 0.05\n      \t  }\n      \t  ]\n        }\n     ]\n    }\n  },\n  \"from_cache\": false,\n  \"metadata\": \"string\"\n}"
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    example: 3fa85f64-5717-4562-b3fc-2c963f66afa6
+                  code:
+                    type: integer
+                    example: 200
+                    default: 0
+                  project_id:
+                    type: integer
+                    example: 12345
+                    default: 0
+                  user_id:
+                    type: integer
+                    example: 1234
+                    default: 0
+                  created_on:
+                    type: string
+                    example: '2020-05-25T19:55:02.312Z'
+                  status:
+                    type: object
+                    properties:
+                      status:
+                        type: object
+                        properties:
+                          code:
+                            type: integer
+                            example: 0
+                            default: 0
+                          message:
+                            type: string
+                            example: SUCCESS
+                      response:
+                        type: object
+                        properties:
+                          input:
+                            type: object
+                            properties:
+                              id:
+                                type: string
+                                example: 3fa85f64-5717-4562-b3fc-2c963f66afa6
+                              charge:
+                                type: integer
+                                example: 0
+                                default: 0
+                              model:
+                                type: string
+                                example: string
+                              model_version:
+                                type: integer
+                                example: 0
+                                default: 0
+                              model_type:
+                                type: string
+                                example: string
+                              created_on:
+                                type: string
+                                example: string
+                              media:
+                                type: object
+                                properties:
+                                  type:
+                                    type: string
+                                    example: string
+                                  mimetype:
+                                    type: string
+                                    example: string
+                                  duration:
+                                    type: integer
+                                    example: 0
+                                    default: 0
+                                  width:
+                                    type: integer
+                                    example: 0
+                                    default: 0
+                                  height:
+                                    type: integer
+                                    example: 0
+                                    default: 0
+                              user_id:
+                                type: integer
+                                example: 0
+                                default: 0
+                              project_id:
+                                type: integer
+                                example: 0
+                                default: 0
+                          output:
+                            type: array
+                            items:
+                              type: object
+                              properties:
+                                time:
+                                  type: integer
+                                  example: 0
+                                  default: 0
+                                classes:
+                                  type: array
+                                  items:
+                                    type: object
+                                    properties:
+                                      class:
+                                        type: string
+                                        example: general_nsfw
+                                      score:
+                                        type: number
+                                        example: 0.9
+                                        default: 0
+                  from_cache:
+                    type: boolean
+                    example: false
+                    default: true
+                  metadata:
+                    type: string
+                    example: string
+        '400':
+          description: '400'
+          content:
+            application/json:
+              examples:
+                Bad Request:
+                  value: '{
+
+                    "return_code":400,
+
+                    "message":"Invalid Auth Method. ''Token'' authentication required."
+
+                    }'
+              schema:
+                type: object
+                properties:
+                  return_code:
+                    type: integer
+                    example: 400
+                    default: 0
+                  message:
+                    type: string
+                    example: Invalid Auth Method. 'Token' authentication required.
+      deprecated: false
+      security: []
+      x-readme:
+        code-samples:
+        - language: curl
+          code: "curl --request POST \\\n  --url https://api.thehive.ai/api/v2/task/sync \\\n  --header 'accept: application/json' \\\n  --header 'authorization: token <API_KEY>' \\\n  --form 'url=http://hive-public.s3.amazonaws.com/demo_request/gun1.jpg'"
+        - language: javascript
+          code: "var request = require(\"request\");\n\nvar options = {\n  method: 'POST',\n  url: 'https://api.thehive.ai/api/v2/task/sync',\n  headers: {\n    accept: 'application/json',\n    authorization: 'token <API_KEY>'\n  },\n  form: {url:\"http://hive-public.s3.amazonaws.com/demo_request/gun1.jpg\"}\n};  \n\nrequest(options, function (error, response, body) {\n  if (error) throw new Error(error);\n\n  console.log(body);\n});\n\n"
+          name: Node
+        - language: python
+          code: "# -------------------------- #\n# Vision API request with public or signed url to hosted image.\n\nimport requests\n\nheaders = {\n    'Authorization': 'Token YOUR_API_KEY',\n}\n\ndata = {\n  'url': 'my_domain/my_file.jpg',\n  'metadata': '{\"my_UUID\": \"3c78fc82-f797-11ea-adc1-0242ac120002\"}'\n}\n\nresponse = requests.post('https://api.thehive.ai/api/v2/task/sync',\n                          headers=headers, \n                          data=data)\n\nresponse_string = response.text \nresponse_dict = response.json()\n\n# -------------------------- #\n# Vision API request for local media files.\n\nimport requests\n\nheaders = { \n    'Authorization': 'Token YOUR_API_KEY',\n}\n\nfiles = {'image': open('my_path/my_image.jpg', 'rb')}\n\ndata = {\n  'metadata': '{\"my_UUID\": \"3c78fc82-f797-11ea-adc1-0242ac120002\"}'\n}\n\nresponse = requests.post('https://api.thehive.ai/api/v2/task/sync', \n                         headers=headers, \n                         files=files,\n                         data = data)\n\nresponse_string = response.text \nresponse_dict = response.json()\n\n# -------------------------- #\n# Text API requests\n\nimport requests\n\nheaders = {\n    'Authorization': 'Token YOUR_API_KEY',\n}\n\ndata = {\n  'text_data': 'My input string goes here.',\n  'metadata': '{\"my_UUID\": \"3c78fc82-f797-11ea-adc1-0242ac120002\"}'\n}\n\nresponse = requests.post('https://api.thehive.ai/api/v2/task/sync',\n                          headers=headers, \n                          data=data)\n\nresponse_string = response.text \nresponse_dict = response.json()\n\n# -------------------------- #"
+        - language: java
+          code: "/* -------------------------- */\n/* Vision API request with public or signed url to hosted image. */\n\nimport java.io.*;\nimport okhttp3.*;\npublic class main {\n public static void main(String []args) throws IOException{\n   OkHttpClient client = new OkHttpClient().newBuilder()\n     .build();\n   MediaType mediaType = MediaType.parse(\"text/plain\");\n   RequestBody body = new MultipartBody.Builder().setType(MultipartBody.FORM)\n     .addFormDataPart(\"url\", \"http://hive-public.s3.amazonaws.com/demo_request/gun1.jpg\")\n     .build();\n   Request request = new Request.Builder()\n     .url(\"https://api.thehive.ai/api/v2/task/sync\")\n     .method(\"POST\", body)\n     .addHeader(\"accept\", \"application/json\")\n     .addHeader(\"authorization\", \"token YOUR_API_KEY\")\n     .build();\n   Response response = client.newCall(request).execute();\n   System.out.println(response.body().string());\n }\n}\n\n/* -------------------------- */\n/* Vision API request for local media files. */\n\nimport java.io.*;\nimport okhttp3.*;\npublic class main {\n public static void main(String []args) throws IOException{\n   OkHttpClient client = new OkHttpClient().newBuilder()\n     .build();\n   MediaType mediaType = MediaType.parse(\"text/plain\");\n   File file= new File(\"YOUR_IMAGE_PATH/YOUR_IMAGE.jpg\");\n   String imageName=\"YOUR_IMAGE.jpg\";\n   RequestBody body = new MultipartBody.Builder().setType(MultipartBody.FORM)\n     .addFormDataPart(\"image\", imageName, RequestBody.create(MEDIA_TYPE_PNG, file))\n     .build();\n   Request request = new Request.Builder()\n     .url(\"https://api.thehive.ai/api/v2/task/sync\")\n     .method(\"POST\", body)\n     .addHeader(\"accept\", \"application/json\")\n     .addHeader(\"authorization\", \"token YOUR_API_KEY\")\n     .build();\n   Response response = client.newCall(request).execute();\n   System.out.println(response.body().string());\n }\n}\n\n\n/* -------------------------- */\n/* Text API requests */\n\nimport java.io.*;\nimport okhttp3.*;\npublic class main {\n public static void main(String []args) throws IOException{\n   OkHttpClient client = new OkHttpClient().newBuilder()\n     .build();\n   MediaType mediaType = MediaType.parse(\"text/plain\");\n   RequestBody body = new MultipartBody.Builder().setType(MultipartBody.FORM)\n     .addFormDataPart(\"text_data\", \"Test string.\")\n     .build();\n   Request request = new Request.Builder()\n     .url(\"https://api.thehive.ai/api/v2/task/sync\")\n     .method(\"POST\", body)\n     .addHeader(\"accept\", \"application/json\")\n     .addHeader(\"Authorization\", \"Token YOUR_API_KEY\")\n     .build();\n   Response response = client.newCall(request).execute();\n   System.out.println(response.body().string());\n }\n}\n\n"
+        samples-languages:
+        - curl
+        - javascript
+        - python
+        - java
+      tags:
+      - Task
+components:
+  securitySchemes:
+    sec0:
+      type: apiKey
+      in: header
+      name: token
+      x-default: token <API_KEY>
+x-readme-fauxas: true
+x-provenance:
+  method: searched
+  source: https://docs.thehive.ai/reference
+  harvested: '2026-10-25'
+  tool: harvest-readme-openapi.py
+  note: Assembled verbatim from the OpenAPI definition ReadMe embeds in each operation page of the provider's developer portal; paths and components merged by API title, nothing authored.
+  assembled_from:
+  - https://docs.thehive.ai/reference/get-task-summary.md
+  - https://docs.thehive.ai/reference/submit-a-task-asynchronously.md
+  - https://docs.thehive.ai/reference/submit-a-task-synchronously.md
+  - https://docs.thehive.ai/reference/trigger-a-callback-for-a-completed-task.md
+  merge:
+    pages: 4
+    deduped: 3
+    conflicts_kept_first: 0

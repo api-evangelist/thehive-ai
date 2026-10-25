@@ -1,25 +1,96 @@
 aid: thehive-ai
+
 name: Hive
-description: 'Hive is a company surfaced via the API Evangelist harvest backlog (source: vc-portfolio;
-  backed by 8vc) and added to the network as a stub for full-pipeline profiling.'
+
+image: https://thehive.ai/_next/static/images/thumbnail-e2a49944225d8e3f443794a8a866114a.jpg
+
+description: 'Hive provides enterprise‑grade AI solutions, offering cloud‑based machine‑learning models, computer‑vision services, and data‑labeling platforms. Trusted by large innovators, Hive enables organizations to integrate advanced AI into products at scale, with a focus on security, compliance, and rapid deployment.'
+
 url: https://raw.githubusercontent.com/api-evangelist/thehive-ai/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-25 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-25'
+
 modified: '2026-10-25'
+
 tags:
 - Company
-apis: []
+- AI
+- Machine Learning
+- Data Labeling
+- Enterprise
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-x-backed-by:
-- 8vc
+
 common:
+- type: AgenticAccess
+  url: agentic-access/thehive-ai-agentic-access.yml
+- type: Plans
+  url: plans/thehive-ai-plans-pricing.yml
+- type: Spectral
+  url: rules/thehive-ai-rules.yml
+- type: Authentication
+  url: authentication/thehive-ai-authentication.yml
+- type: ErrorCatalog
+  url: errors/thehive-ai-problem-types.yml
+- type: Conformance
+  url: conformance/thehive-ai-conformance.yml
+- type: LLMsTxt
+  url: llms/thehive-ai-llms.txt
+- type: SecurityTxt
+  url: well-known/thehive-ai-status-security.txt
+- type: WellKnown
+  url: well-known/thehive-ai-well-known.yml
+- type: Hosts
+  url: hosts/thehive-ai-hosts.yml
+- type: Vendors
+  url: vendors/thehive-ai-vendors.yml
+- type: TermsOfService
+  url: https://thehive.ai/terms-of-use
+- type: StatusPage
+  url: https://status.thehive.ai/
+- type: PrivacyPolicy
+  url: https://thehive.ai/privacy
+- type: Pricing
+  url: https://thehive.ai/pricing
+- type: Blog
+  url: https://thehive.ai/blog
+- type: GettingStarted
+  url: https://docs.thehive.ai/docs/getting-started
+- type: Documentation
+  url: https://docs.thehive.ai/
+- type: DomainSecurity
+  url: security/thehive-ai-domain-security.yml
 - type: Website
   url: https://thehive.ai
+
+apis:
+- aid: thehive-ai:thehive-ai-task-api
+  name: Hive Task API
+  description: The Task API from Hive — 4 operation(s) for task.
+  baseURL: https://api.thehive.ai/api/
+  tags:
+  - Task
+  properties:
+  - type: OpenAPI
+    url: openapi/thehive-ai-task-api-openapi.yml
+x-backed-by:
+- 8vc
+x-enrichment:
+  date: '2026-10-25'
+  status: enriched
+  artifacts_added: 21
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

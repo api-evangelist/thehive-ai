@@ -1,0 +1,20 @@
+generated: '2026-10-25'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://thehive.ai/pricing
+sources:
+- https://thehive.ai/pricing
+name: Hive pricing
+audience: developer-api
+pricing_basis: usage-other
+plans:
+- name: Built for Developers
+  price_text: $50+ in Free Credits after adding a payment method
+  description: Selected Models available full pay-as-you-go Access to 10+ Hive Models Default Rate Limits Train Custom Models with AutoML Explore
+    Models
+- name: Built for Enterprise
+  price_text: Custom Pricing to fit your organization’s usage
+  description: Access to all Hive Models and Hive Moderation Dashboard for fine-grained content reviews and escalations Highest Rate Limits to
+    handle large-scale traffic Premium Support from our experts Multi-region support for faster response times, available for high-volume deployments
+    Contact Us
+docs: https://thehive.ai/pricing

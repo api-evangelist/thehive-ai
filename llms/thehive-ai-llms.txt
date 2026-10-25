@@ -1,0 +1,174 @@
+# hivesi Documentation
+
+> Hive Documentation AI models to understand content,  Content Moderation  Video, Image, Text & Audio,  Content Moderation - Age Verification, AI-Generated Imagery, AI-Generated Text Object & Scene Tagging - Logo Detection & Context-Based Ad Targeting AutoML Text-to-Image Generation Text-to-Video Generation Text Generation / Chat Image Captioning Multimodal LLM
+
+## Docs: Documentation
+- [Getting Started with Hive](https://docs.thehive.ai/docs/getting-started.md): Welcome to Hive! This guide will help you explore our powerful AI models, get familiar with our platform, and set up your first project. Whether you’re here for moderation or for other use cases,…
+- [Frequently Asked Questions (FAQ)](https://docs.thehive.ai/docs/frequently-asked-questions-faq.md): Answers to some common questions about getting started with Hive
+
+## Docs: Understand
+- [Visual Moderation - Overview](https://docs.thehive.ai/docs/visual-content-moderation.md)
+  - [GARM Brand Safety & Suitability](https://docs.thehive.ai/docs/brand-safety-and-suitability.md): Hive Visual Moderation & GARM
+  - [Visual Moderation - Sexual Content Classes](https://docs.thehive.ai/docs/sexual-content.md): Visual Moderation Class Descriptions
+  - [Visual Moderation - Violence, Weapons & Gore Classes](https://docs.thehive.ai/docs/class-descriptions-violence-gore.md): Visual Moderation Class Descriptions
+  - [Visual Moderation - Drugs, Smoking, and Other Vices Classes](https://docs.thehive.ai/docs/class-descriptions-drugs-smoking.md): Visual Moderation Class Descriptions
+  - [Visual Moderation - Hate & Bullying Classes](https://docs.thehive.ai/docs/class-descriptions-hate-bullying.md)
+  - [Visual Moderation - Other Classes](https://docs.thehive.ai/docs/class-descriptions-other-misc-characteristics.md)
+- [Text Moderation - Overview](https://docs.thehive.ai/docs/classification-text.md)
+  - [Text Moderation - Classes](https://docs.thehive.ai/docs/detailed-class-descriptions-text-moderation.md): Detailed descriptions of each of our Hive Text Moderation Classes
+- [Audio Moderation & Speech to Text](https://docs.thehive.ai/docs/audiovideotext.md)
+- [OCR Moderation](https://docs.thehive.ai/docs/ocr-text-recognition-moderation.md)
+- [Demographic Attributes](https://docs.thehive.ai/docs/demographic-attributes.md)
+- [Logo & Logo Location](https://docs.thehive.ai/docs/logo-detection.md)
+- [Translation](https://docs.thehive.ai/docs/translation.md)
+- [OCR (Emojis + Text Recognition)](https://docs.thehive.ai/docs/ocr-text-recognition.md)
+- [Contextual Scene Classification](https://docs.thehive.ai/docs/contextual-scene-classification.md)
+  - [IAB Content Taxonomy](https://docs.thehive.ai/docs/supported-iab-content-taxonomy.md)
+- [People Counting](https://docs.thehive.ai/docs/people-counting.md)
+- [Common Object Detection](https://docs.thehive.ai/docs/detection-1.md)
+- [AI-Generated Content Detection](https://docs.thehive.ai/docs/ai-generated-content-detection.md)
+  - [Image and Video Detection](https://docs.thehive.ai/docs/ai-image-and-video-detection.md)
+  - [Audio Detection](https://docs.thehive.ai/docs/ai-generated-audio-detection.md)
+  - [Music Detection](https://docs.thehive.ai/docs/ai-generated-music-detection.md)
+- [Face Similarity](https://docs.thehive.ai/docs/face-similarity.md)
+- [Aesthetic Classification](https://docs.thehive.ai/docs/aesthetic-classification.md)
+- [CSAM Detection - Classifier API](https://docs.thehive.ai/docs/csam-detection-api.md): Integrate with our CSAM Detection API for both images and videos
+- [CSAM Detection - Hash Matching API](https://docs.thehive.ai/docs/image-and-video-csam-matching.md): Integrate with our CSAM Detection API for both images and videos
+- [CSAM Detection - Combined API](https://docs.thehive.ai/docs/csam-detection-combined-api.md)
+- [CSE Text Classifier API](https://docs.thehive.ai/docs/cse-text-classifier-api.md)
+
+## Docs: AutoML
+- [Quickstart](https://docs.thehive.ai/docs/automl-overview.md): A quick overview of the AutoML workflow and how to get started
+  - [Concepts](https://docs.thehive.ai/docs/automl-key-concepts.md): Brief descriptions for each of the main components of our AutoML platform
+- [Datasets](https://docs.thehive.ai/docs/automl-datasets.md): Learn how to upload and edit datasets
+  - [Snapshots](https://docs.thehive.ai/docs/automl-snapshots.md): A quick guide to creating and using snapshots
+  - [Functions](https://docs.thehive.ai/docs/functions.md): A quick guide to dataset functions
+- [Models](https://docs.thehive.ai/docs/automl-models.md): A guide to creating a model with our AutoML platform
+  - [Text Classification - AutoML Training](https://docs.thehive.ai/docs/automl-text-classification.md): A guide on training your custom text classification models using AutoML
+  - [Image Classification - AutoML Training](https://docs.thehive.ai/docs/automl-image-classification.md): A guide on training your custom image classification models using Hive AutoML
+  - [Training Options](https://docs.thehive.ai/docs/training-options.md): A guide to training options for AutoML
+  - [Hyperparameter Search](https://docs.thehive.ai/docs/hyperparameter-search.md): A quick guide to hyperparameter search in AutoML
+- [Evaluations](https://docs.thehive.ai/docs/automl-evaluations.md)
+- [Deployments](https://docs.thehive.ai/docs/automl-deployments.md): A guide to deploying and accessing your AutoML models
+
+## Docs: Search
+- [Web Search](https://docs.thehive.ai/docs/web-search.md)
+- [Custom Search](https://docs.thehive.ai/docs/custom-index-search.md): A walkthrough of functionality and how-to guide for the Custom Search API
+  - [Custom Search for Videos](https://docs.thehive.ai/docs/custom-search.md): A walkthrough of functionality and how-to guide for the Custom Search API
+- [Intellectual Property Detection](https://docs.thehive.ai/docs/intellectual-property-detection.md)
+  - [Celebrity Recognition](https://docs.thehive.ai/docs/celebrity-recognition.md)
+  - [Celebrity Voice Detection](https://docs.thehive.ai/docs/celebrity-voice-detection.md)
+  - [Likeness Detection](https://docs.thehive.ai/docs/likeness-detection.md)
+  - [Media Search](https://docs.thehive.ai/docs/media-search.md)
+
+## Docs: Generate
+- [Hive Vision Language Model (VLM)](https://docs.thehive.ai/docs/hive-vision-language-model-vlm.md): How to integrate with Hive's latest Vision Language Model.
+  - [Prompt Builder](https://docs.thehive.ai/docs/prompt-builder.md): Prompts for our Vision Language Model
+- [Chat Completions (OpenAI-Compatible LLMs)](https://docs.thehive.ai/docs/chat-completions-openai-compatible-llms.md): How to access Hive's self-hosted large language models through the OpenAI-compatible Chat Completions API.
+  - [DeepSeek V4.1 Flash-1017](https://docs.thehive.ai/docs/deepseek-v41-flash.md)
+- [Image Generation APIs](https://docs.thehive.ai/docs/image-generation-models.md): Generate, customize, and scale your image creation with Hive's powerful API platform.
+- [Video Generation APIs](https://docs.thehive.ai/docs/video-generation.md): A guide on how to integrate with our Video Generation APIs
+- [Speech Generation APIs](https://docs.thehive.ai/docs/speech-generation.md): A guide on how to integrate with our text-to-speech APIs
+
+## Docs: Reference
+- [Supported File Formats](https://docs.thehive.ai/docs/supported-file-formats.md)
+
+## Docs: Hive Project Dashboard
+- [Viewing and Filtering Tasks - Lucene](https://docs.thehive.ai/docs/viewing-and-filtering-tasks.md)
+
+## Docs: Moderation Dashboard
+- [Moderation Dashboard - Overview](https://docs.thehive.ai/docs/what-is-the-moderation-dashboard.md): Welcome to Hive's powerful review tool - Moderation Dashboard!
+- [Types of Submissions](https://docs.thehive.ai/docs/types-of-submissions.md): An in-depth guide to submitting tasks as threads, conversations, and livestreams
+- [Setting Up Enforcement Actions](https://docs.thehive.ai/docs/actions.md): How to create and monitor custom actions that follow your triggers in Moderation Dashboard.
+- [Defining Moderation Rules](https://docs.thehive.ai/docs/rules.md): How to use Moderation Dashboard to define and monitor custom rules.
+- [Metadata Configuration](https://docs.thehive.ai/docs/metadata-configuration.md)
+- [Thresholds](https://docs.thehive.ai/docs/thresholds.md)
+- [Spam Manager](https://docs.thehive.ai/docs/spam-manager.md)
+- [Submit Reported Posts and Users](https://docs.thehive.ai/docs/submit-user-reports-to-the-dashboard.md)
+- [Review Feeds](https://docs.thehive.ai/docs/post-review-feed-1.md)
+- [Users and User Content Feeds](https://docs.thehive.ai/docs/user-content-feeds.md)
+- [User Permissions](https://docs.thehive.ai/docs/user-permissions.md)
+- [Slack Alerts](https://docs.thehive.ai/docs/slack-alerts.md): Get Slack Alerts about critical moderation events and performance metrics. Keep a close watch on task volume, stale tasks, action triggers and more.
+- [Handle Appeals](https://docs.thehive.ai/docs/handle-appeals.md)
+- [Policy Management](https://docs.thehive.ai/docs/policy-management.md)
+- [Submit to CSAM Detection API](https://docs.thehive.ai/docs/submit-to-thorn-api.md)
+- [NCMEC Report Integration](https://docs.thehive.ai/docs/report-to-ncmec.md): Settings for reporting to the National Center for Missing & Exploited Children (NCMEC).
+  - [Send NCMEC Report via Callback URL](https://docs.thehive.ai/docs/send-ncmec-report-via-callback-url.md)
+- [Watchlists](https://docs.thehive.ai/docs/watchlists.md): How to create custom watchlists on Moderation Dashboard.
+- [Get Post Summary](https://docs.thehive.ai/docs/get-post-summary.md)
+- [User Tags](https://docs.thehive.ai/docs/user-tags.md)
+  - [Adding User Tags](https://docs.thehive.ai/docs/adding-user-tags.md)
+  - [Removing User Tags](https://docs.thehive.ai/docs/removing-user-tags.md)
+- [Using Hive's VLM in Moderation Dashboard](https://docs.thehive.ai/docs/using-hives-vlm-in-moderation-dashboard.md): How to create and use custom Hive VLM prompts with Moderation Dashboard.
+
+## Docs: Hive Customer Guides
+- [Using Hive's Visual Moderation API](https://docs.thehive.ai/docs/visual-moderation-api.md): Welcome to Hive's Visual Moderation! This guide will help you configure your project, integrate our API, and understand our model responses.
+- [Using Text Moderation API](https://docs.thehive.ai/docs/text-moderation-api.md): Welcome to Hive's Text Moderation! This guide will help you configure your project, integrate our API, and understand our model responses.
+- [Moderation Dashboard Quickstart Part 1: Auto-Moderation](https://docs.thehive.ai/docs/moderation-dashboard-quickstart-tutorial.md): A step-by-step guide to setting up Moderation Dashboard
+- [Moderation Dashboard Quickstart Part 2: Human Review](https://docs.thehive.ai/docs/moderation-dashboard-quickstart-part-2-human-review.md)
+- [Onboarding Single Sign-On with Hive](https://docs.thehive.ai/docs/onboarding-single-sign-on-with-hive.md): A guide to integrating Single Sign-On with Hive
+  - [Enabling Self-Serve SSO](https://docs.thehive.ai/docs/self-serve-sso.md): A guide to integrating Single Sign-On with Hive
+  - [Onboarding Okta OIDC with Hive](https://docs.thehive.ai/docs/onboarding-okta-oidc-with-hive.md): A guide to setting up an Okta OIDC application to integrate SSO with Hive
+  - [Onboarding Okta SAML with Hive](https://docs.thehive.ai/docs/onboarding-okta-saml-with-hive.md): A guide to setting up an Okta SAML application to integrate SSO with Hive
+  - [Onboarding PingOne OIDC with Hive](https://docs.thehive.ai/docs/onboarding-pingone-oidc-with-hive.md): A guide to setting up a PingOne OIDC application to integrate SSO with Hive
+  - [Onboarding PingOne SAML with Hive](https://docs.thehive.ai/docs/onboarding-pingone-saml-with-hive.md): A guide to setting up a PingOne SAML application to integrate SSO with Hive
+  - [Onboarding Amazon IAM Identity Center SAML with Hive](https://docs.thehive.ai/docs/onboarding-amazon-iam-identity-center-saml-with-hive.md): A guide to setting up an Amazon IAM Identity Center SAML 2.0 application to integrate SSO with Hive
+
+## API Reference: Tasks
+- [API Reference Introduction](https://docs.thehive.ai/reference/api-reference-introduction.md): Getting Started with our API Reference
+- [Authentication](https://docs.thehive.ai/reference/authentication.md)
+- [Creating Tasks in the API](https://docs.thehive.ai/reference/submitting-via-task-api.md): Learn how to define your Task, then send it
+- [Get Task Summary](https://docs.thehive.ai/reference/get-task-summary.md)
+- [Get Stream Status](https://docs.thehive.ai/reference/get-stream-status.md)
+- [Error Schema](https://docs.thehive.ai/reference/error-codes.md)
+
+## API Reference: Detect:Classify API Responses
+- [Detect/Classify Response Formats Guide](https://docs.thehive.ai/reference/response-formats.md)
+- [Classification](https://docs.thehive.ai/reference/classification.md)
+- [Detection](https://docs.thehive.ai/reference/detection.md)
+- [Text Moderation](https://docs.thehive.ai/reference/text-moderation.md)
+- [AI-Generated Content Detection](https://docs.thehive.ai/reference/ai-generated-content-detection-1.md)
+  - [Image and Video Detection](https://docs.thehive.ai/reference/ai-generated-image-and-video-detection-1.md)
+  - [Text Detection](https://docs.thehive.ai/reference/ai-generated-text-detection-1.md)
+  - [Audio Detection](https://docs.thehive.ai/reference/ai-generated-audio-detection-1.md)
+  - [Music Detection](https://docs.thehive.ai/reference/ai-generated-music-detection-1.md)
+- [Submitting Video](https://docs.thehive.ai/reference/video.md)
+- [Submitting Audio](https://docs.thehive.ai/reference/audio.md)
+- [Face Similarity](https://docs.thehive.ai/reference/face-similarity-1.md)
+- [Aesthetic Classification](https://docs.thehive.ai/reference/aesthetic-classification-1.md)
+- [CSAM Detection - Hash Matching API](https://docs.thehive.ai/reference/image-and-video-csam-matching-api.md)
+- [CSAM Detection - Classifier API](https://docs.thehive.ai/reference/csam-detection-api-reference.md)
+- [CSAM Detection - Combined API](https://docs.thehive.ai/reference/csam-detection-combined-api-reference.md)
+- [CSE Text Classifier API](https://docs.thehive.ai/reference/cse-text-classifier-api-reference.md)
+
+## API Reference: Search API Responses
+- [Intellectual Property Detection](https://docs.thehive.ai/reference/intellectual-property-detection-1.md)
+  - [Celebrity Recognition](https://docs.thehive.ai/reference/celebrity-recognition-1.md)
+  - [Celebrity Voice Detection](https://docs.thehive.ai/reference/celebrity-voice-detection.md)
+  - [Likeness Detection](https://docs.thehive.ai/reference/likeness-detection-1.md)
+  - [Media Search](https://docs.thehive.ai/reference/media-search-reference.md)
+- [Custom Search](https://docs.thehive.ai/reference/custom-index-search-1.md)
+
+## API Reference: Generate API Responses
+- [Image Generation Models - API Responses](https://docs.thehive.ai/reference/image-generation-models-reference.md): Our Image Generation Models include SDXL, Flux Schnell, and a few of our own custom trained models.
+- [Video Generation - API Response](https://docs.thehive.ai/reference/video-generation-1.md)
+- [Audio Generation - API Response](https://docs.thehive.ai/reference/speech-generation-1.md)
+
+## API Reference: API Error Messages
+- [Common Errors](https://docs.thehive.ai/reference/common-errors.md)
+
+## API Reference: Moderation Dashboard
+- [v2 Endpoint (Multi-Model Submission)](https://docs.thehive.ai/reference/v2-endpoint-multi-model-submission.md)
+  - [Sync Task Request](https://docs.thehive.ai/reference/sync-task-request.md)
+  - [Async Task Request](https://docs.thehive.ai/reference/async-task-request.md)
+  - [Retry Task Request](https://docs.thehive.ai/reference/retry-task-request.md)
+  - [Common Task Request Errors](https://docs.thehive.ai/reference/common-task-request-errors.md)
+  - [Legacy API Response](https://docs.thehive.ai/reference/legacy-api-response.md)
+- [Custom Index (Add)](https://docs.thehive.ai/reference/custom-index-add.md)
+- [Custom Index (Remove)](https://docs.thehive.ai/reference/custom-index-remove.md)
+- [Create an Appeal](https://docs.thehive.ai/reference/create-an-appeal.md)
+- [Get Appeal Status](https://docs.thehive.ai/reference/get-appeal-status.md)
+- [Watchlist Terms (Add)](https://docs.thehive.ai/reference/watchlist-terms-add.md)
+- [Watchlist Terms (Remove)](https://docs.thehive.ai/reference/watchlist-terms-remove.md)
+- [Watchlist Terms (Update)](https://docs.thehive.ai/reference/watchlist-terms-update.md)
+- [v1 - Dashboard API Reference](https://docs.thehive.ai/reference/v1-dashboard-api-reference.md)

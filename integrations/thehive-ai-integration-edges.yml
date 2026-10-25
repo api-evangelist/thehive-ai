@@ -1,0 +1,23 @@
+generated: '2026-10-25'
+method: none
+source:
+- https://n8n.io/integrations/thehive/
+checked:
+- https://composio.dev/toolkits/thehive-ai
+- https://monid.ai/tools/thehive-ai
+- https://n8n.io/integrations/thehive-ai/
+- https://n8n.io/integrations/thehive/
+- https://zapier.com/apps/hive/integrations
+- https://zapier.com/apps/thehive-ai/integrations
+- https://zapier.com/apps/thehive/integrations
+summary: null
+marketplace_apps:
+- marketplace: n8n
+  channel: open-source-node
+  app: thehive
+  url: https://n8n.io/integrations/thehive/
+  identity: title
+  pair_pages: 0
+  pairs: []
+edges: []
+templates: []
